@@ -2,32 +2,40 @@
   "ProjectName": "Paradise App",
   "ProjectGuid": "e4d5bf58-f26c-43a5-9719-d70ddd45932c",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.ParadiseApp",
+  "AppIdentifier": "com.cetastech.ParadiseApp",
   "DisplayName": "Paradise App",
   "Author": "",
-  "Description": "Paradise App",
+  "Description": "Paradise App By Hybrid",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
     "2"
   ],
-  "iOSBackgroundMode": [],
+  "iOSBackgroundMode": [
+    "location",
+    "fetch"
+  ],
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "3.7.0",
   "AndroidPermissions": [
-    "android.permission.INTERNET"
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.INTERNET",
+    "android.permission.SEND_SMS"
   ],
   "DeviceOrientations": [
     "Portrait",
     "Landscape"
   ],
-  "AndroidHardwareAcceleration": "false",
+  "AndroidHardwareAcceleration": "True",
   "iOSStatusBarStyle": "Default",
   "Framework": "Cordova",
   "WP8TileTitle": "",
   "WP8Publisher": "",
   "WP8Capabilities": [
+    "ID_CAP_LOCATION",
+    "ID_CAP_MAP",
     "ID_CAP_NETWORKING",
     "ID_CAP_WEBBROWSERCOMPONENT"
   ],
@@ -41,5 +49,27 @@
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "com.ionic.keyboard@1.0.4",
+    "org.apache.cordova.battery-status",
+    "org.apache.cordova.camera",
+    "org.apache.cordova.contacts",
+    "org.apache.cordova.device",
+    "org.apache.cordova.device-motion",
+    "org.apache.cordova.device-orientation",
+    "org.apache.cordova.dialogs",
+    "org.apache.cordova.file",
+    "org.apache.cordova.file-transfer",
+    "org.apache.cordova.geolocation",
+    "org.apache.cordova.globalization",
+    "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.media",
+    "org.apache.cordova.media-capture",
+    "org.apache.cordova.network-information",
+    "org.apache.cordova.plugin.sms@0.1.1",
+    "org.apache.cordova.splashscreen",
+    "org.apache.cordova.statusbar",
+    "org.apache.cordova.vibration"
   ]
 }
