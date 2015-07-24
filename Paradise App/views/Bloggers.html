@@ -1,0 +1,30 @@
+<div data-role="view" id="bloggerView" data-layout="main" data-title="Location Detail" data-show="showBloggers">
+    <ul id="bloggerList" data-source="bloggersData" data-endlessscroll="true" data-template="bloggersTemplate" data-role="listview" data-style="inset"></ul>
+</div>
+<script id="bloggersTemplate" type="text/x-kendo-template">
+    <a href="\#BloggerDetailsView" class="km-listview-link" data-role="listview-link">
+        <h2>#=data.Code#</h2>
+        <h4>#=data.Name#</h4>
+    </a>
+</script>
+<script type="text/javascript">
+    var bloggersData;
+
+    bloggersData = new kendo.data.DataSource({
+        transport: {
+            read: {
+                 url: "http://localhost:8969//LocationMasterService.svc/GetLocationMasterTableByCityLookupCodeId/60",
+
+                data: {
+                    Accept: "application/json"
+                }
+            }
+        }
+
+    });
+
+    function showBloggers(e) {
+        debugger;
+        bloggersData.fetch();
+    }
+</script>
